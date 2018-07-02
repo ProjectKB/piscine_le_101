@@ -1,0 +1,5 @@
+Credentials cache: API:37147
+        Principal: loiberti@LE-101.FR
+
+  Issued                Expires               Principal
+Jul  2 11:29:04 2018  Jul  2 21:29:04 2018  krbtgt/LE-101.FR@LE-101.FR
