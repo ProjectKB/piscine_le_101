@@ -1,11 +1,19 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                          LE - /            */
+/*                                                              /             */
+/*   ft_print_alphabet.c                              .::    .:/ .      .::   */
+/*                                                 +:+:+   +:    +:  +:+:+    */
+/*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
+/*                                                 #+#   #+    #+    #+#      */
+/*   Created: 2018/07/03 09:26:54 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/03 09:40:24 by loiberti    ###    #+. /#+    ###.fr     */
+/*                                                         /                  */
+/*                                                        /                   */
+/* ************************************************************************** */
 
-void ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
-void ft_print_alphabet(void)
+void	ft_print_alphabet(void)
 {
 	char i;
 
@@ -15,10 +23,4 @@ void ft_print_alphabet(void)
 		ft_putchar(i);
 		i++;
 	}
-}
-
-int main()
-{
-	ft_print_alphabet();
-	return (0);
 }

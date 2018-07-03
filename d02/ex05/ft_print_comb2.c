@@ -1,11 +1,19 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                          LE - /            */
+/*                                                              /             */
+/*   ft_print_comb2.c                                 .::    .:/ .      .::   */
+/*                                                 +:+:+   +:    +:  +:+:+    */
+/*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
+/*                                                 #+#   #+    #+    #+#      */
+/*   Created: 2018/07/03 09:24:35 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/03 09:55:11 by loiberti    ###    #+. /#+    ###.fr     */
+/*                                                         /                  */
+/*                                                        /                   */
+/* ************************************************************************** */
 
-void ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
-void print_char(char a, char b, char c, char d)
+void	ft_print_char(char a, char b, char c, char d)
 {
 	if ((c >= a && d >= b + 1) || c > a)
 	{
@@ -14,22 +22,16 @@ void print_char(char a, char b, char c, char d)
 		ft_putchar(' ');
 		ft_putchar(c);
 		ft_putchar(d);
+		if (!(a == '9' && b == '8'))
+		{
 			ft_putchar(',');
 			ft_putchar(' ');
 		}
+	}
 }
 
-void ft_print_comb2(void)
+void	ft_algo(char a, char b, char c, char d)
 {
-	char a;
-	char b;
-	char c;
-	char d;
-
-	a = '0';
-	b = '0';
-	c = '0';
-	d = '1';
 	while (a != '9' + 1)
 	{
 		while (b != '9' + 1)
@@ -38,7 +40,7 @@ void ft_print_comb2(void)
 			{
 				while (d != '9' + 1)
 				{
-					print_char(a, b, c, d);
+					ft_print_char(a, b, c, d);
 					d++;
 				}
 				d = '0';
@@ -52,8 +54,7 @@ void ft_print_comb2(void)
 	}
 }
 
-int main()
+void	ft_print_comb2(void)
 {
-	ft_print_comb2();
-	return (0);
+	ft_algo('0', '0', '0', '1');
 }
