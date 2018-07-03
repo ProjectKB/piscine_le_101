@@ -1,48 +1,44 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strstr.c                                      .::    .:/ .      .::   */
+/*   ft_strcapitalize.c                               .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/03 16:36:07 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 18:03:05 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/03 18:35:50 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/03 19:19:05 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
 
-char	*ft_strstr(char *str, char *to_find)
+char	*ft_strcapitalize(char *str)
 {
 	int i;
-	int j;
 
 	i = 0;
-	if (!to_find[i])
-		return (str);
 	while (str[i])
 	{
-		j = 0;
-		while (to_find[j] == str[i + j])
-		{
-			if (!to_find[j + 1])
-				return (str + i);
-			j++;
-		}
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] += 32;
 		i++;
 	}
-	return (0);
+	i = 0;
+	while (str[i])
+	{
+		if ((str[i] >= 'a' && str[i] <= 'z') && (str[i - 1] < 48 ||
+		(str[i - 1] > 57 && str[i - 1] < 65) || (str[i - 1] > 90 &&
+		str[i - 1] < 97) || str[i - 1] > 122))
+			str[i] -= 32;
+		i++;
+	}
+	return (str);
 }
 
 int main()
 {
-	char str[] = "hello";
-	char t[] = "";
-	printf("%s\n", strstr(str, t));
-	printf("%s", ft_strstr(str, t));
+	char str[] = "123Hello /*/*/hghgh a";
+	printf("%s\n", ft_strcapitalize(str));
 	return (0);
 }
-
-

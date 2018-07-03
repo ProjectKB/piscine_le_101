@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strstr.c                                      .::    .:/ .      .::   */
+/*   ft_strcmp.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/03 16:36:07 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 18:03:05 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/03 18:03:22 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/03 18:12:24 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,35 +14,21 @@
 #include <stdio.h>
 #include <string.h>
 
-char	*ft_strstr(char *str, char *to_find)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int i;
-	int j;
 
 	i = 0;
-	if (!to_find[i])
-		return (str);
-	while (str[i])
-	{
-		j = 0;
-		while (to_find[j] == str[i + j])
-		{
-			if (!to_find[j + 1])
-				return (str + i);
-			j++;
-		}
+	while (s1[i] == s2[i] && s1[i] && s2[i])
 		i++;
-	}
-	return (0);
+	return (*s1 - *s2);
 }
 
 int main()
 {
-	char str[] = "hello";
-	char t[] = "";
-	printf("%s\n", strstr(str, t));
-	printf("%s", ft_strstr(str, t));
+	char a[] = "a";
+	char b[] = "h";
+	printf("%d", ft_strcmp(a, b));
+	printf("%d", strcmp(a, b));
 	return (0);
 }
-
-
