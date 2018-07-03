@@ -1,44 +1,35 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strcapitalize.c                               .::    .:/ .      .::   */
+/*   ft_str_is_alpha.c                                .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/03 18:35:50 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 20:00:02 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/03 20:35:14 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/03 20:47:44 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strcapitalize(char *str)
+int	ft_str_is_lowercase(char *str)
 {
 	int i;
 
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			str[i] += 32;
+		if (!(str[i] >= 'a' && str[i] <= 'z'))
+			return (0);
 		i++;
 	}
-	i = 0;
-	while (str[i])
-	{
-		if ((str[i] >= 'a' && str[i] <= 'z') && (str[i - 1] < 48 ||
-		(str[i - 1] > 57 && str[i - 1] < 65) || (str[i - 1] > 90 &&
-		str[i - 1] < 97) || str[i - 1] > 122))
-			str[i] -= 32;
-		i++;
-	}
-	return (str);
+	return (1);
 }
 
 int main()
 {
-	char str[] = "123Hello /*/*/hghgh a";
-	printf("%s\n", ft_strcapitalize(str));
+	char st[] = "a";
+	printf("%d", ft_str_is_lowercase(st));
 	return (0);
 }

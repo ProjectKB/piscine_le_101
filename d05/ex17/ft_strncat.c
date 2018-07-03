@@ -1,44 +1,40 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strcapitalize.c                               .::    .:/ .      .::   */
+/*   ft_strcat.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/03 18:35:50 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 20:00:02 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/03 20:56:11 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/03 21:04:53 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strcapitalize(char *str)
+char	*ft_strncat(char *dest, char *src, int nb)
 {
 	int i;
+	int j;
 
 	i = 0;
-	while (str[i])
-	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			str[i] += 32;
+	j = 0;
+	while (dest[i])
 		i++;
-	}
-	i = 0;
-	while (str[i])
+	while (src[j] && j < nb)
 	{
-		if ((str[i] >= 'a' && str[i] <= 'z') && (str[i - 1] < 48 ||
-		(str[i - 1] > 57 && str[i - 1] < 65) || (str[i - 1] > 90 &&
-		str[i - 1] < 97) || str[i - 1] > 122))
-			str[i] -= 32;
-		i++;
+		dest[i + j] = src[j];
+		j++;
 	}
-	return (str);
+	dest[i + j] = '\0';
+	return (dest);
 }
 
 int main()
 {
-	char str[] = "123Hello /*/*/hghgh a";
-	printf("%s\n", ft_strcapitalize(str));
+	char dest[] = "hello";
+	char src[] = "coucou";
+	printf("%s", ft_strncat(dest, src, 2));
 	return (0);
 }
