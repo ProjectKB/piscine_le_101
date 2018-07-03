@@ -6,14 +6,12 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/02 20:31:43 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/02 20:34:07 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/03 10:21:47 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
 	int i;
 
@@ -21,10 +19,4 @@ int ft_strlen(char *str)
 	while (str[i])
 		i++;
 	return (i);
-}
-
-int main()
-{
-	printf("%d", ft_strlen("coucou"));
-	return (0);
 }

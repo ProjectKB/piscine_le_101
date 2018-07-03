@@ -6,19 +6,17 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/02 20:35:45 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/02 21:04:20 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/03 10:23:07 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char *ft_strrev(char *str)
+char	*ft_strrev(char *str)
 {
 	int start;
 	int end;
 	int swap;
-	
+
 	start = 0;
 	end = 0;
 	while (str[end + 1])
@@ -32,11 +30,4 @@ char *ft_strrev(char *str)
 		end--;
 	}
 	return (str);
-}
-
-int main()
-{
-	char str[] = "helloa";
-	printf("%s", ft_strrev(str));
-	return (0);
 }

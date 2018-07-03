@@ -6,12 +6,12 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/02 20:25:01 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/02 20:26:57 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/03 10:19:43 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-void ft_ultimate_div_mod(int *a, int *b)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
 	int swap;
 

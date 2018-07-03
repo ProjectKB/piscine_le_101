@@ -6,14 +6,12 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/02 21:04:44 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/02 21:19:22 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/03 10:23:55 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
 	int r;
 	int n;
@@ -37,11 +35,4 @@ int ft_atoi(char *str)
 	if (n)
 		r = -r;
 	return (r);
-}
-
-int main()
-{
-	char str[] = "+000a123";
-	printf("%d", ft_atoi(str));
-	return (0);
 }

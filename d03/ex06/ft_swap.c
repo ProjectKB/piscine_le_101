@@ -6,12 +6,12 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/02 20:34:26 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/02 20:35:30 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/03 10:22:06 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-void ft_swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
 	int swap;
 

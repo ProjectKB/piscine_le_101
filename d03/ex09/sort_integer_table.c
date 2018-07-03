@@ -6,14 +6,12 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/02 21:19:51 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/02 21:33:10 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/03 10:24:52 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void ft_sort_integer_table(int *tab, int size)
+void	ft_sort_integer_table(int *tab, int size)
 {
 	int i;
 	int swap;
@@ -31,18 +29,4 @@ void ft_sort_integer_table(int *tab, int size)
 		else
 			i++;
 	}
-}
-
-int main()
-{
-	int tab[] = {1, 8, 0, 6, 8};
-	int size = 5;
-	ft_sort_integer_table(tab, size);
-	int i = 0;
-	while (i < size)
-	{
-		printf("%d", tab[i]);
-		i++;
-	}
-	return (0);
 }
