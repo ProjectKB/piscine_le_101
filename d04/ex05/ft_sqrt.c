@@ -6,12 +6,10 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/03 13:33:29 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 13:37:21 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/04 11:36:44 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_sqrt(int nb)
 {
@@ -24,11 +22,5 @@ int	ft_sqrt(int nb)
 			return (i);
 		i++;
 	}
-	return (0);
-}
-
-int main()
-{
-	printf("%d", ft_sqrt(-9));
 	return (0);
 }

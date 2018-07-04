@@ -6,12 +6,10 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/03 13:37:54 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 13:54:39 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/04 11:36:59 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_is_prime(int nb)
 {
@@ -27,9 +25,4 @@ int	ft_is_prime(int nb)
 		i++;
 	}
 	return (1);
-}
-
-int main()
-{
-	printf("%d", ft_is_prime(13));
 }

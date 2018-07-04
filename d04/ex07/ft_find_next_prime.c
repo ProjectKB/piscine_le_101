@@ -1,17 +1,15 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_is_prime.c                                    .::    .:/ .      .::   */
+/*   ft_find_next_prime.c                             .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/03 13:37:54 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 14:02:58 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/04 11:37:13 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/04 11:37:34 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_is_prime(int nb)
 {
@@ -29,7 +27,7 @@ int	ft_is_prime(int nb)
 	return (1);
 }
 
-int ft_find_next_prime(nb)
+int	ft_find_next_prime(nb)
 {
 	if (ft_is_prime(nb))
 		return (nb);
@@ -38,10 +36,4 @@ int ft_find_next_prime(nb)
 		nb++;
 	}
 	return (nb);
-}
-
-int	main()
-{
-	printf("%d", ft_find_next_prime(-50000));
-	return (0);
 }
