@@ -6,19 +6,14 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/04 18:54:43 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/04 19:35:44 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/04 21:32:01 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-int	ft_strcmp(char *s1, char *s2)
+int		ft_strcmp(char *s1, char *s2)
 {
 	int i;
 
@@ -42,8 +37,8 @@ void	ft_putstr(char *str)
 
 void	ft_sort_params(int argc, char **argv)
 {
-	int i;
-	char *swap;
+	int		i;
+	char	*swap;
 
 	i = 1;
 	swap = "";
@@ -61,7 +56,7 @@ void	ft_sort_params(int argc, char **argv)
 	}
 }
 
-int	main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	int i;
 

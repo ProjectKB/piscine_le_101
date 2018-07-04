@@ -6,17 +6,12 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/04 17:28:24 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/04 17:32:38 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/04 20:54:50 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {
@@ -30,7 +25,7 @@ void	ft_putstr(char *str)
 	}
 }
 
-int	main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	int i;
 
