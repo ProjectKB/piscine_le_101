@@ -1,19 +1,17 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strupcase.c                                   .::    .:/ .      .::   */
+/*   ft_strlowcase.c                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/03 18:18:54 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 18:35:31 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/04 13:46:38 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/04 13:46:50 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strupcase(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int i;
 
@@ -25,11 +23,4 @@ char	*ft_strupcase(char *str)
 		i++;
 	}
 	return (str);
-}
-
-int main()
-{
-	char s[] = "COUCOU";
-	printf("%s", ft_strupcase(s));
-	return (0);
 }

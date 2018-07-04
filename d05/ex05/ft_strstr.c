@@ -6,13 +6,10 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/03 16:36:07 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 18:03:05 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/04 12:49:27 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <string.h>
 
 char	*ft_strstr(char *str, char *to_find)
 {
@@ -35,14 +32,3 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return (0);
 }
-
-int main()
-{
-	char str[] = "hello";
-	char t[] = "";
-	printf("%s\n", strstr(str, t));
-	printf("%s", ft_strstr(str, t));
-	return (0);
-}
-
-

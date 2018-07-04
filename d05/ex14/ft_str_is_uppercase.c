@@ -1,17 +1,15 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_str_is_alpha.c                                .::    .:/ .      .::   */
+/*   ft_str_is_uppercase.c                            .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/03 20:35:14 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 20:49:39 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/04 13:49:04 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/04 13:49:10 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_str_is_uppercase(char *str)
 {
@@ -25,11 +23,4 @@ int	ft_str_is_uppercase(char *str)
 		i++;
 	}
 	return (1);
-}
-
-int main()
-{
-	char st[] = "A";
-	printf("%d", ft_str_is_uppercase(st));
-	return (0);
 }

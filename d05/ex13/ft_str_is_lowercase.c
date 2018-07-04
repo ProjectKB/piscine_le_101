@@ -1,17 +1,15 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_str_is_alpha.c                                .::    .:/ .      .::   */
+/*   ft_str_is_lowercase.c                            .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/03 20:35:14 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 20:47:44 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/04 13:48:43 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/04 13:48:49 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_str_is_lowercase(char *str)
 {
@@ -25,11 +23,4 @@ int	ft_str_is_lowercase(char *str)
 		i++;
 	}
 	return (1);
-}
-
-int main()
-{
-	char st[] = "a";
-	printf("%d", ft_str_is_lowercase(st));
-	return (0);
 }

@@ -6,12 +6,10 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/03 16:25:31 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 16:32:22 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/04 12:47:44 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 char	*ft_strcpy(char *dest, char *src)
 {
@@ -25,12 +23,4 @@ char	*ft_strcpy(char *dest, char *src)
 	}
 	dest[i] = '\0';
 	return (dest);
-}
-
-int main()
-{
-	char dest[] = "hello";
-	char src[] = "coucou";
-	printf("%s", ft_strcpy(dest, src));
-	return (0);
 }

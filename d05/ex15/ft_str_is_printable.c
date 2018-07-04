@@ -1,17 +1,15 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_str_is_alpha.c                                .::    .:/ .      .::   */
+/*   ft_str_is_printable.c                            .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/03 20:35:14 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 20:55:06 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/04 13:49:26 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/04 13:49:36 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_str_is_printable(char *str)
 {
@@ -25,12 +23,4 @@ int	ft_str_is_printable(char *str)
 		i++;
 	}
 	return (1);
-}
-
-int main()
-{
-	char st[4];
-	st[1] = 6;
-	printf("%d", ft_str_is_printable(st));
-	return (0);
 }

@@ -6,12 +6,10 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/03 18:35:50 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 20:00:02 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/04 13:47:08 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 char	*ft_strcapitalize(char *str)
 {
@@ -34,11 +32,4 @@ char	*ft_strcapitalize(char *str)
 		i++;
 	}
 	return (str);
-}
-
-int main()
-{
-	char str[] = "123Hello /*/*/hghgh a";
-	printf("%s\n", ft_strcapitalize(str));
-	return (0);
 }

@@ -1,17 +1,15 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_str_is_alpha.c                                .::    .:/ .      .::   */
+/*   ft_str_is_numeric.c                              .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/03 20:35:14 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 20:44:55 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/04 13:47:56 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/04 13:48:09 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_str_is_numeric(char *str)
 {
@@ -25,11 +23,4 @@ int	ft_str_is_numeric(char *str)
 		i++;
 	}
 	return (1);
-}
-
-int main()
-{
-	char st[] = "123";
-	printf("%d", ft_str_is_numeric(st));
-	return (0);
 }
