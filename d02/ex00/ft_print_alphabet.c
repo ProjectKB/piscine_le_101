@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/03 09:26:54 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 09:40:24 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/05 09:53:50 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@ void	ft_putchar(char c);
 
 void	ft_print_alphabet(void)
 {
-	char i;
+	char	i;
 
 	i = 'a';
 	while (i != 'z' + 1)

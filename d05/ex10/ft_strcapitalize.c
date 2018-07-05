@@ -6,14 +6,14 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/03 18:35:50 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/04 13:47:08 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/05 11:46:12 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 char	*ft_strcapitalize(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])

@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/04 18:54:43 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/04 21:32:01 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/05 11:50:28 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@ void	ft_putchar(char c);
 
 int		ft_strcmp(char *s1, char *s2)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s1[i] == s2[i] && s1[i] && s2[i])
@@ -25,7 +25,7 @@ int		ft_strcmp(char *s1, char *s2)
 
 void	ft_putstr(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -58,7 +58,7 @@ void	ft_sort_params(int argc, char **argv)
 
 int		main(int argc, char **argv)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	ft_sort_params(argc, argv);

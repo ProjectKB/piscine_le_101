@@ -6,14 +6,14 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/04 13:49:26 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/04 13:49:36 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/05 11:47:03 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 int	ft_str_is_printable(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])

@@ -6,15 +6,15 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/03 20:56:11 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/04 13:49:55 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/05 11:47:18 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 char	*ft_strcat(char *dest, char *src)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;

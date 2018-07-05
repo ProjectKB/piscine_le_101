@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/03 09:26:19 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 09:42:42 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/05 09:54:27 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@ void	ft_putchar(char c);
 
 void	ft_print_numbers(void)
 {
-	char i;
+	char	i;
 
 	i = '0';
 	while (i != '9' + 1)

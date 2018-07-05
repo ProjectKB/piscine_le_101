@@ -6,15 +6,15 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/03 16:36:07 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/04 12:49:27 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/05 11:45:00 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	if (!to_find[i])

@@ -6,14 +6,14 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/04 13:46:38 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/04 13:46:50 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/05 11:45:58 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 char	*ft_strlowcase(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])

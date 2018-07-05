@@ -6,14 +6,14 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/03 16:25:31 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/04 12:47:44 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/05 11:44:30 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (src[i])

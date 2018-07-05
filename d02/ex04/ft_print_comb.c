@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/03 09:25:10 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 09:48:10 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/05 09:55:02 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -27,9 +27,9 @@ void	print_char(char a, char b, char c)
 
 void	ft_print_comb(void)
 {
-	char a;
-	char b;
-	char c;
+	char	a;
+	char	b;
+	char	c;
 
 	a = '0';
 	b = '1';

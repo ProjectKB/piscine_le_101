@@ -6,14 +6,14 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/04 13:48:43 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/04 13:48:49 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/05 11:46:42 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 int	ft_str_is_lowercase(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])

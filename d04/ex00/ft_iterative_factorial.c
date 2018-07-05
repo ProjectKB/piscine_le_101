@@ -6,15 +6,15 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/03 10:40:17 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/04 11:34:38 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/05 11:41:45 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 int	ft_iterative_factorial(int nb)
 {
-	int i;
-	int n;
+	int	i;
+	int	n;
 
 	i = 1;
 	n = nb;

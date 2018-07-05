@@ -6,16 +6,16 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/02 21:04:44 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/03 10:23:55 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/05 11:37:02 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 int	ft_atoi(char *str)
 {
-	int r;
-	int n;
-	int p;
+	int	r;
+	int	n;
+	int	p;
 
 	r = 0;
 	n = 0;
