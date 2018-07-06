@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/05 15:19:03 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/05 15:32:26 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/06 10:06:40 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -26,9 +26,8 @@ int	ft_ultimate_range(int **range, int min, int max)
 		*range = NULL;
 		return (0);
 	}
-	tab = (int*)malloc(sizeof(*tab) * s);
-	if (!tab)
-		exit(0);
+	if (!(tab = (int*)malloc(sizeof(*tab) * s)))
+		return (0);
 	while (i != s)
 	{
 		tab[i] = min++;

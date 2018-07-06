@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/05 16:02:48 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/06 09:47:19 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/06 10:04:44 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -55,9 +55,8 @@ char	*ft_concat_params(int argc, char **argv)
 		s += ft_strlen(argv[i]);
 		i++;
 	}
-	arg = (char*)malloc(sizeof(*arg) * (s + argc - 1));
-	if (!arg)
-		exit(0);
+	if (!(arg = (char*)malloc(sizeof(*arg) * (s + argc - 1))))
+		return (NULL);
 	i = 1;
 	while (i < argc)
 	{

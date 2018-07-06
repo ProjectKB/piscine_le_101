@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/05 16:56:10 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/06 09:56:30 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/06 10:12:31 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -56,9 +56,9 @@ void	ft_fill_tab(char *str, char **tab)
 	{
 		while (str[p] == ' ' || str[p] == '\n' || str[p] == '\t')
 			p++;
-		tab[i] = (char*)malloc(sizeof(*tab) * (ft_length_word(str, p) + 1));
-		if (!tab[i])
-			exit(0);
+		if (!(tab[i] = (char*)malloc(sizeof(*tab) * 
+		(ft_length_word(str, p) + 1))))
+			return ;
 		j = 0;
 		while (j < ft_length_word(str, p))
 		{
@@ -76,9 +76,8 @@ char	**ft_split_whitespaces(char *str)
 {
 	char	**tab;
 
-	tab = (char**)malloc(sizeof(**tab) * (ft_count_word(str) + 1));
-	if (!tab)
-		exit(0);
+	if (!(tab = (char**)malloc(sizeof(**tab) * (ft_count_word(str) + 1))))
+		return (NULL);
 	ft_fill_tab(str, tab);
 	return (tab);
 }
