@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_abs.h                                         .::    .:/ .      .::   */
+/*   ft_point.h                                       .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/06 16:10:42 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/06 16:23:28 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/06 16:27:49 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/06 16:30:51 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
+#ifndef FT_POINT
 
-#define FT_ABS_H
+#define FT_POINT
 
-#define ABS(Value) ((Value > 0) ? Value : -Value)
+typedef struct	s_point
+{
+	int x;
+	int y;
+}	t_point;
 
 #endif
