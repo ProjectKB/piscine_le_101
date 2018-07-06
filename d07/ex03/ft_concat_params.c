@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/05 16:02:48 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/05 16:54:29 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/06 09:47:19 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -31,7 +31,7 @@ char	*ft_strcat(char *dest, char *src)
 
 	i = 0;
 	j = 0;
-	while (src[i])
+	while (dest[i])
 		i++;
 	while (src[j])
 	{
