@@ -1,24 +1,17 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_point.h                                       .::    .:/ .      .::   */
+/*   ft_param_to_tab.c                                .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/06 16:27:49 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/06 16:36:39 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/06 16:37:11 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/06 16:45:08 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef FT_POINT
+char	**ft_split_whitespaces(char *str);
+void	ft_print_words_tables(char **tab);
 
-#define FT_POINT
 
-typedef struct	s_point
-{
-	int x;
-	int y;
-}	t_point;
-
-#endif

@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_point.h                                       .::    .:/ .      .::   */
+/*   ft_stock_par.h                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/06 16:27:49 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/06 16:36:39 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/06 16:39:53 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/06 16:45:11 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef FT_POINT
+#ifndef FT_STOCK_PAT_H
 
-#define FT_POINT
+#define FT_STOCK_PAT_H
 
-typedef struct	s_point
+typedef struct s_stock_par
 {
-	int x;
-	int y;
-}	t_point;
+	int size_params;
+	char *str;
+	char *copy;
+	char **tab;
+}	t_stock_par;
 
 #endif
