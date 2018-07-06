@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/05 16:56:10 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/05 19:29:03 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/06 09:56:30 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -65,7 +65,7 @@ void	ft_fill_tab(char *str, char **tab)
 			tab[i][j] = str[j + p];
 			j++;
 		}
-		j = 0;
+		tab[i][j] = '\0';
 		p += ft_length_word(str, p);
 		i++;
 	}
