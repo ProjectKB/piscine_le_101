@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_stock_par.h                                   .::    .:/ .      .::   */
+/*   main.c                                           .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/06 16:39:53 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/08 10:44:23 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/08 10:07:24 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/08 11:04:23 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef FT_STOCK_PAR_H
+#include "ft_stock_par.h"
+#include <stdio.h>
 
-# define FT_STOCK_PAR_H
+struct	s_stock_par *ft_param_to_tab(int ac, char **av);
+void	ft_show_tab(struct s_stock_par *par);
 
-char			**ft_split_whitespaces(char *str);
-void			ft_print_words_tables(char **tab);
-typedef struct	s_stock_par
+int	main(int argc, char **argv)
 {
-	int		size_param;
-	char	*str;
-	char	*copy;
-	char	**tab;
-}				t_stock_par;
-
-#endif
+	t_stock_par *test;
+	
+	test = ft_param_to_tab(argc, argv);
+	ft_show_tab(test);
+	return (0);
+}

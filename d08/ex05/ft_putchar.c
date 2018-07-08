@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_stock_par.h                                   .::    .:/ .      .::   */
+/*   ft_putchar.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/06 16:39:53 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/08 10:44:23 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/08 10:11:03 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/08 10:12:30 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef FT_STOCK_PAR_H
+#include <unistd.h>
 
-# define FT_STOCK_PAR_H
-
-char			**ft_split_whitespaces(char *str);
-void			ft_print_words_tables(char **tab);
-typedef struct	s_stock_par
+void ft_putchar(char c)
 {
-	int		size_param;
-	char	*str;
-	char	*copy;
-	char	**tab;
-}				t_stock_par;
-
-#endif
+	write(1, &c, 1);
+}

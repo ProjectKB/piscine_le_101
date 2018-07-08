@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_stock_par.h                                   .::    .:/ .      .::   */
+/*   print_words_tables.c                             .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/06 16:39:53 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/08 10:44:23 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/05 18:27:42 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/05 18:52:17 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef FT_STOCK_PAR_H
+void	ft_putchar(char c);
 
-# define FT_STOCK_PAR_H
-
-char			**ft_split_whitespaces(char *str);
-void			ft_print_words_tables(char **tab);
-typedef struct	s_stock_par
+void	ft_print_words_tables(char **tab)
 {
-	int		size_param;
-	char	*str;
-	char	*copy;
-	char	**tab;
-}				t_stock_par;
+	int		i;
+	int		j;
 
-#endif
+	i = 0;
+	j = 0;
+	while (tab[i])
+	{
+		while (tab[i][j])
+		{
+			ft_putchar(tab[i][j]);
+			j++;
+		}
+		ft_putchar('\n');
+		j = 0;
+		i++;
+	}
+}

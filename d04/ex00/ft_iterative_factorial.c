@@ -6,10 +6,12 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/03 10:40:17 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/05 11:41:45 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/08 08:29:55 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int	ft_iterative_factorial(int nb)
 {
@@ -28,4 +30,10 @@ int	ft_iterative_factorial(int nb)
 		i++;
 	}
 	return (nb);
+}
+
+int main()
+{
+	printf("%d", ft_iterative_factorial(5));
+	return (0);
 }
