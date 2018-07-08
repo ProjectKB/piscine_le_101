@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/06 16:37:11 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/08 10:55:17 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/08 11:33:22 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,7 +21,7 @@ int					ft_strlen(char *str)
 	i = 0;
 	while (str[i])
 		i++;
-	return (0);
+	return (i);
 }
 
 char				*ft_strdup(char *src)
@@ -51,7 +51,7 @@ struct s_stock_par	*ft_param_to_tab(int ac, char **av)
 	t_stock_par		*param;
 
 	i = 0;
-	if (!(param = (t_stock_par*)malloc(sizeof(*param) * (ac + 1))))
+	if (!(param = (t_stock_par*)malloc(sizeof(*param) * ac + 1)))
 		return (NULL);
 	while (i != ac)
 	{
@@ -59,6 +59,7 @@ struct s_stock_par	*ft_param_to_tab(int ac, char **av)
 		param[i].str = av[i];
 		param[i].copy = ft_strdup(av[i]);
 		param[i].tab = ft_split_whitespaces(av[i]);
+		i++;
 	}
 	param[i].str = 0;
 	return (param);

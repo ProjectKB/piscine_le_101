@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/08 10:21:22 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/08 11:04:26 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/08 11:33:25 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -46,6 +46,7 @@ void	ft_putnbr(int nb)
 void ft_print_words_tables(char **tab)
 {
 	int i;
+	int j;
 
 	i = 0;
 	ft_putstr(tab[i]);
