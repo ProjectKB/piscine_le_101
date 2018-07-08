@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/06 22:32:27 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/08 08:38:53 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/08 08:43:37 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -41,14 +41,14 @@ void	rush(int x, int y)
 	if (x <= 0 || y <= 0)
 		return ;
 	i = 1;
-	print_f_line(x, 'A', 'B', 'C');
+	print_f_line(x, '/', '*', '\\');
 	if (y > 1)
 	{
 		while (i != y - 1)
 		{
-			print_f_line(x, 'B', ' ', 'B');
+			print_f_line(x, '*', ' ', '*');
 			i++;
 		}
-		print_f_line(x, 'C', 'B', 'A');
+		print_f_line(x, '\\', '*', '/');
 	}
 }
