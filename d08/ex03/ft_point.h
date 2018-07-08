@@ -6,19 +6,19 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/06 16:27:49 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/06 16:36:39 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/08 09:41:14 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef FT_POINT
+#ifndef FT_POINT_H
 
-#define FT_POINT
+# define FT_POINT_H
 
 typedef struct	s_point
 {
 	int x;
 	int y;
-}	t_point;
+}				t_point;
 
 #endif
