@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 10:29:22 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/09 15:08:40 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/09 15:44:54 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -56,7 +56,7 @@ int		ft_strlen(char *str)
 	return (r);
 }
 
-int test(int nb, char *base)
+int ft_calcul_nb_to_base(int nb, char *base)
 {
 	int r;
 	int i;
@@ -82,13 +82,42 @@ int test(int nb, char *base)
 	return (r);
 }
 
+int ft_atoi_base(char *str, char *base)
+{
+	int i;
+	int j;
+
+	i = -1;
+	j = 1;
+	while (base[++i])
+	{
+		if (base[i] == '+' && base[i] == '-')
+			return (0);
+	}
+	if (ft_strlen(base) < 2)
+		return (0);
+	i = -1;
+	while (base[++i])
+	{
+		while (base[j])
+		{
+			if (base[i] == base[j] && i != j)
+				return (0);
+			j++;
+		}
+		j = 1;
+	}
+	j = ft_atoi(str);
+	return (ft_calcul_nb_to_base(j, base));
+}
+
 int		main()
 {
-	int nb;
 	int a;
 	char base[] = "0123456789ABCDEF";
-
-	nb = ft_atoi("1830");
-	printf("%d", test(nb, base));
+	char nb[] = "1830";
+	int b = ft_atoi(nb);
+	
+	printf("%d", ft_atoi_base(nb, base));
 	return (0);
 }
