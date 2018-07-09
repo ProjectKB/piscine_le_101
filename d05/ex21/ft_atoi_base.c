@@ -6,12 +6,10 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 10:29:22 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/09 16:38:15 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/09 17:05:20 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 void	ft_putchar(char c);
 
@@ -25,50 +23,84 @@ int		ft_strlen(char *str)
 	return (i);
 }
 
-void	ft_convert_number(int nbr, char *base)
+int		ft_atoi(char *str)
 {
-	int	l_base;
+	int	r;
+	int	n;
+	int	p;
 
-	l_base = ft_strlen(base);
-	if (nbr < 0)
+	r = 0;
+	n = 0;
+	p = 0;
+	while (str[p] <= ' ' || (str[p] == '+' && (str[p + 1] != '+' &&
+					str[p + 1] != '-')))
+		p++;
+	if (str[p] == '-')
 	{
-		ft_putchar('-');
-		nbr = -nbr;
+		n = -1;
+		p++;
 	}
-	if (nbr > 9)
+	while (str[p] >= '0' && str[p] <= '9')
 	{
-		ft_convert_number(nbr / l_base, base);
-		ft_putchar(base[nbr % l_base]);
+		r = r * 10 + str[p] - '0';
+		p++;
 	}
-	else
-		ft_putchar(nbr + '0');
+	if (n)
+		r = -r;
+	return (r);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+int		ft_calcul_nb_to_base(int nb, char *base)
+{
+	int r;
+	int i;
+	int l_base;
+	int tab[1000];
+
+	l_base = ft_strlen(base);
+	i = 0;
+	r = 0;
+	while (nb / l_base != 0)
+	{
+		tab[i] = nb % l_base;
+		nb = nb / l_base;
+		i++;
+	}
+	tab[i] = nb;
+	r += tab[i];
+	while (i != 0)
+	{
+		r = r * 10 + tab[i - 1];
+		i--;
+	}
+	return (r);
+}
+
+int		ft_atoi_base(char *str, char *base)
 {
 	int	i;
 	int	j;
 
-	i = 0;
+	i = -1;
 	j = 1;
-	while (base[i])
+	while (base[++i])
 	{
 		if (base[i] == '+' && base[i] == '-')
-			return ;
-		i++;
+			return (0);
 	}
 	if (ft_strlen(base) < 2)
-		return ;
+		return (0);
 	i = -1;
 	while (base[++i])
 	{
 		while (base[j])
 		{
 			if (base[i] == base[j] && i != j)
-				return ;
+				return (0);
 			j++;
 		}
 		j = 1;
 	}
-	ft_convert_number(nbr, base);
+	j = ft_atoi(str);
+	return (ft_calcul_nb_to_base(j, base));
 }

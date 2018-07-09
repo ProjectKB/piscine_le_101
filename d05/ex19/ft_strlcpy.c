@@ -6,16 +6,12 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/09 12:12:28 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/09 12:12:35 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/09 16:44:01 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-
-int		ft_strlen(char *str)
+int				ft_strlen(char *str)
 {
 	int				i;
 
@@ -36,18 +32,4 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 		return (-5);
 	else
 		return (ft_strlen(src));
-
-}
-
-int					main()
-{
-	const char b[] = "salutationqert";
-	char c[] = "salutationaert";
-	char a[] = "01234";
-
-	unsigned int i = 4;
-	unsigned long j = 6;
-	printf("%lu\n", strlcpy(a, b, i));
-	printf("%lu\n", ft_strlcpy(a, c, i));
-	return (0);
 }

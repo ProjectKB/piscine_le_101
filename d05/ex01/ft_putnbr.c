@@ -6,17 +6,12 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/03 09:27:10 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/09 12:27:30 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/09 16:39:58 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_putnbr(int nb)
 {
@@ -35,10 +30,4 @@ void	ft_putnbr(int nb)
 	}
 	else
 		ft_putchar(n + '0');
-}
-
-int main()
-{
-	ft_putnbr(-2147483647);
-	return (0);
 }
