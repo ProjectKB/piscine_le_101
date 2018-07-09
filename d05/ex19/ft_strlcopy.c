@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strlcat.c                                     .::    .:/ .      .::   */
+/*   ft_strlcopy.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/08 11:44:50 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/09 10:03:51 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/09 10:04:35 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/09 10:27:34 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -25,32 +25,29 @@ int		ft_strlen(char *str)
 	return (i);
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	unsigned int	r;
+	unsigned int	v_max;
 	unsigned int	z;
 
 	z = 0;
-	r = ft_strlen(src) + size;
-	if (size < z)
-		return (-5);
-	else if (size == ft_strlen(dest) + 1)
-		return (r - 1);
-	else if (size > ft_strlen(dest) + 1)
+	v_max = ft_strlen(dest) + 1;
+	if (size > v_max || size < z)
 		return (-5);
 	else
-		r = ft_strlen(src) + size;
-	return (r);
+		return (ft_strlen(src));
+
 }
 
 int					main()
 {
-	const char b[] = "salut";
-	char c[] = "salut";
-	char a[] = "0123456789";
+	const char b[] = "salutation";
+	char c[] = "salutation";
+	char a[] = "01234";
 
-	unsigned int i = 18;
-	printf("%d\n", ft_strlcat(a, c, i));
-	printf("%lu\n", strlcat(a, b, i));
+	unsigned int i = 6;
+	unsigned long j = 6;
+	printf("%lu\n", strlcpy(a, b, i));
+	printf("%lu\n", ft_strlcpy(a, c, i));
 	return (0);
 }
