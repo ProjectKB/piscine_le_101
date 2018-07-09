@@ -1,44 +1,41 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_putnbr.c                                      .::    .:/ .      .::   */
+/*   ft_atoi.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/03 09:27:10 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/09 12:27:30 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/02 21:04:44 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/09 13:29:51 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_atoi(char *str, char *base)
 {
-	write(1, &c, 1);
-}
+	int	r;
+	int	n;
+	int	p;
 
-void	ft_putnbr(int nb)
-{
-	long	n;
-
-	n = nb;
-	if (n < 0)
+	r = 0;
+	n = 0;
+	p = 0;
+	while (str[p] <= ' ' || (str[p] == '+' && (str[p + 1] != '+' &&
+	str[p + 1] != '-')))
+		p++;
+	if (str[p] == '-')
 	{
-		ft_putchar('-');
-		n = -n;
+		n = -1;
+		p++;
 	}
-	if (n > 9)
+	while (str[p] >= '0' && str[p] <= '9')
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		r = r * 10 + str[p] - '0';
+		p++;
 	}
-	else
-		ft_putchar(n + '0');
+	if (n)
+		r = -r;
+	return (r);
 }
 
-int main()
-{
-	ft_putnbr(-2147483647);
-	return (0);
-}
+
