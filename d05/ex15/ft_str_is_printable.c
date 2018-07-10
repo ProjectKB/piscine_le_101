@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/04 13:49:26 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/05 11:47:03 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/10 16:40:08 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,7 +18,7 @@ int	ft_str_is_printable(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] < 32 && str[i] > 126)
+		if (str[i] <= 32 && str[i] >= 126)
 			return (0);
 		i++;
 	}
