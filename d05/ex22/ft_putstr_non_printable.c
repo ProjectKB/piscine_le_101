@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_putnbr_base.c                                 .::    .:/ .      .::   */
+/*   ft_putstr_non_printable.c                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/09 10:29:22 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/10 07:45:18 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/10 08:54:06 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/10 08:55:31 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -69,4 +69,22 @@ void	ft_putnbr_base(int nbr, char *base)
 		j = 1;
 	}
 	ft_convert_number(nbr, base);
+}
+
+void	ft_putstr_non_printable(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] < 32 || str[i] == 127)
+		{
+			ft_putchar('\\');
+			ft_putnbr_base((int)str[i], "0123456789ABCDEF");
+		}
+		else
+			ft_putchar(str[i]);
+		i++;
+	}
 }
