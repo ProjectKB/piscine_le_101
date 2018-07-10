@@ -6,12 +6,10 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/03 18:35:50 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/10 16:37:24 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/10 16:49:06 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 char	*ft_strcapitalize(char *str)
 {
@@ -34,11 +32,4 @@ char	*ft_strcapitalize(char *str)
 		i++;
 	}
 	return (str);
-}
-
-int main()
-{
-	char x[] = "*ceci ,est,ma-chaine/de ca.r>a<c 8te8res8 ! lE gr4anD mEchant LOUp;;;;; xd:";
-	printf("%s", ft_strcapitalize(x));
-	return (0);
 }
