@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/05 14:21:20 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/06 10:07:19 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/11 13:49:29 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -24,7 +24,7 @@ int	*ft_range(int min, int max)
 	if (min >= max)
 		return (NULL);
 	if (!(tab = (int*)malloc(sizeof(*tab) * s)))
-		return (0);
+		return (NULL);
 	while (i != s)
 	{
 		tab[i] = min++;

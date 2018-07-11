@@ -6,12 +6,12 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/05 16:02:48 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/06 12:55:53 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/11 12:04:55 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdlib.h>
 
 int		ft_strlen(char *str)
 {
