@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/05 16:56:10 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/06 10:12:31 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/11 14:18:15 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -44,40 +44,30 @@ int		ft_length_word(char *str, int p)
 	return (c);
 }
 
-void	ft_fill_tab(char *str, char **tab)
+char	**ft_split_whitespaces(char *str)
 {
 	int		i;
 	int		j;
 	int		p;
+	char	**tab;
 
-	i = 0;
+	i = -1;
 	p = 0;
-	while (i < ft_count_word(str))
+	if (!(tab = (char**)malloc(sizeof(**tab) * (ft_count_word(str) + 1))))
+		return (NULL);
+	while (++i < ft_count_word(str))
 	{
 		while (str[p] == ' ' || str[p] == '\n' || str[p] == '\t')
 			p++;
-		if (!(tab[i] = (char*)malloc(sizeof(*tab) * 
+		if (!(tab[i] = (char*)malloc(sizeof(*tab) *
 		(ft_length_word(str, p) + 1))))
-			return ;
-		j = 0;
-		while (j < ft_length_word(str, p))
-		{
+			return (NULL);
+		j = -1;
+		while (++j < ft_length_word(str, p))
 			tab[i][j] = str[j + p];
-			j++;
-		}
 		tab[i][j] = '\0';
 		p += ft_length_word(str, p);
-		i++;
 	}
 	tab[ft_count_word(str)] = 0;
-}
-
-char	**ft_split_whitespaces(char *str)
-{
-	char	**tab;
-
-	if (!(tab = (char**)malloc(sizeof(**tab) * (ft_count_word(str) + 1))))
-		return (NULL);
-	ft_fill_tab(str, tab);
 	return (tab);
 }

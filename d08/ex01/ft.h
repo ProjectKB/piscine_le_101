@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   main.c                                           .::    .:/ .      .::   */
+/*   ft.h                                             .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/08 10:07:24 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/08 11:04:23 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/06 14:45:05 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/08 11:43:04 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "ft_stock_par.h"
-#include <stdio.h>
+#ifndef FT_H
+# define FT_H
 
-struct	s_stock_par *ft_param_to_tab(int ac, char **av);
-void	ft_show_tab(struct s_stock_par *par);
+void	ft_putchar(char c);
+void	ft_putstr(char *str);
+int		ft_strcmp(char *s1, char *s2);
+int		ft_strlen(char *str);
+void	ft_swap(int *a, int *b);
 
-int	main(int argc, char **argv)
-{
-	t_stock_par *test;
-	
-	test = ft_param_to_tab(argc, argv);
-	ft_show_tab(test);
-	return (0);
-}
+#endif

@@ -1,18 +1,11 @@
 #include <stdio.h>
-#include "ft_point.h"
+#include "ft_abs.h"
 
-void	set_point(t_point *point)
+int	main()
 {
-	point->x = 42;
-	point->y = 21;
-}
+	int a;
 
-int		main(void)
-{
-	t_point		point;
-
-
-	set_point(&point);
-	printf("%d", point.x);
+	a = 55;
+	printf("%d", ABS(a));
 	return (0);
 }
