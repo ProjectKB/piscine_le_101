@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/05 16:56:10 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/11 14:18:15 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/12 19:08:20 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,15 +18,14 @@ int		ft_count_word(char *str)
 	int		i;
 	int		n;
 
-	i = 0;
+	i = -1;
 	n = 0;
-	while (str[i])
+	while (str[++i])
 	{
-		if ((str[i] != ' ' || str[i] != '\n' || str[i] != '\n') &&
-		(str[i + 1] == ' ' || str[i + 1] == '\t' || str[i + 1] == '\n' ||
-		str[i + 1] == '\0'))
+		if ((i == 0 || str[i - 1] == '\t' || str[i - 1] == '\n' ||
+		str[i - 1] == ' ') && (!(str[i] == '\n' || str[i] == '\t' ||
+		str[i] == ' ')))
 			n++;
-		i++;
 	}
 	return (n);
 }
@@ -36,7 +35,7 @@ int		ft_length_word(char *str, int p)
 	int		c;
 
 	c = 0;
-	while ((!(str[p] == ' ' || str[p] == '\n' || str[p] == '\n')) && str[p])
+	while ((!(str[p] == ' ' || str[p] == '\t' || str[p] == '\n')) && str[p])
 	{
 		p++;
 		c++;
