@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/14 09:09:18 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/14 15:22:20 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/14 21:44:04 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -53,49 +53,42 @@ int		ft_convert_char(char c)
 		return (r);
 	}
 	else
-		return (0);
+		return (r);
 }
 
 int		**ft_stock_line(int argc, char **argv)
 {
 	int	**tab;
-	int	x;
-	int	y;
 	int i;
 	int j;
 
-	x = 0;
-	y = 0;
 	i = 0;
 	j = 0;
 	tab = (int**)malloc(sizeof(**tab) * 9);
 	while (argv[i])
 	{
-		tab[x] = malloc(sizeof(*tab) * 9);
+		tab[i] = malloc(sizeof(*tab) * 9);
 		while (argv[i][j])
 		{
-			tab[x][y] = ft_convert_char(argv[i][j]);
-			y++;
+			tab[i][j] = ft_convert_char(argv[i][j]);
 			j++;
 		}
-		y = 0;
 		j = 0;
 		i++;
-		x++;
 	}
 	return (tab);
 }
 
-void	ft_display_tab(int **tab)
+void	ft_display_tab(int tab[9][9])
 {
 	int i;
 	int j;
 
-	i = 1;
+	i = 0;
 	j = 0;
-	while (i != 10)
+	while (i < 9)
 	{
-		while (j != 9)
+		while (j < 9)
 		{
 			ft_putnbr(tab[i][j]);
 			if (j != 8)
@@ -122,12 +115,12 @@ int		ft_verif(int argc, char **argv)
 	return (0);
 }
 
-int		ft_missing_line(int **tab, int x, int v)
+int		ft_missing_line(int tab[9][9], int x, int v)
 {
 	int y;
 
 	y = 0;
-	while (y != 9)
+	while (y < 9)
 	{
 		if (tab[x][y] == v)
 			return (0);
@@ -136,7 +129,7 @@ int		ft_missing_line(int **tab, int x, int v)
 	return (1);
 }
 
-int		ft_missing_column(int **tab, int y, int v)
+int		ft_missing_column(int tab[9][9], int y, int v)
 {
 	int x;
 
@@ -150,19 +143,20 @@ int		ft_missing_column(int **tab, int y, int v)
 	return (1);
 }
 
-int		ft_missing_block(int **tab, int x, int y, int v)
+
+int		ft_missing_block(int tab[9][9], int x, int y, int v)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = x - (x % 3);
 	j = y - (y % 3);
+	x = i;
 	while (x < i + 3)
 	{
-		x = i;
+		y = j;
 		while (y < j + 3)
 		{
-			y = j;
 			if (tab[x][y] == v)
 				return (0);
 			y++;
@@ -172,12 +166,32 @@ int		ft_missing_block(int **tab, int x, int y, int v)
 	return (1);
 }
 
-
-
-
-void	ft_set_up_item(int **tab, int x, int y)
+int        ft_solved_sudoku(int tab[9][9], int position)
 {
-	
+	int	x;
+	int	y;
+	int	v;
+
+	x = position / 9;
+	y = position % 9;
+	v = 1;
+	if (position == (9 * 9))
+		return (1);
+	if (tab[x][y] != 0)
+		return (ft_solved_sudoku(tab, position + 1));
+	while (v <= 9)
+	{
+		if (ft_missing_line(tab, x, v) && ft_missing_column(tab, y, v) &&
+				ft_missing_block(tab, x, y, v))
+		{
+			tab[x][y] = v;
+			if (ft_solved_sudoku(tab, position + 1))
+				return (1);
+		}
+		v++;
+	}
+	tab[x][y] = 0;
+	return (0);
 }
 
 int		main(int argc, char **argv)
@@ -185,11 +199,25 @@ int		main(int argc, char **argv)
 	int i;
 	int j;
 	int **tab;
+	int grille[9][9] =
+	{
+		{9,0,0,1,0,0,0,0,5},
+		{0,0,5,0,9,0,2,0,1},
+		{8,0,0,0,4,0,0,0,0},
+		{0,0,0,0,8,0,0,0,0},
+		{0,0,0,7,0,0,0,0,0},
+		{0,0,0,0,2,6,0,0,9},
+		{2,0,0,3,0,0,0,0,6},
+		{0,0,0,2,0,0,9,0,0},
+		{0,0,1,9,0,4,5,7,0}
+	};
 
-	if (argc != 10 || ft_verif(argc, argv))
-		return (0);
+	/* if (argc != 10 || ft_verif(argc, argv))
+	   return (0); */
 	tab = ft_stock_line(argc, argv);
-
-	ft_display_tab(tab);
+	ft_display_tab(grille);
+	write(1, "\n", 1);
+	ft_solved_sudoku(grille, 0);
+	ft_display_tab(grille);
 	return (0);
 }
