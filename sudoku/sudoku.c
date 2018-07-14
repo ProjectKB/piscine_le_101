@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/14 09:09:18 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/14 12:56:52 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/14 15:22:20 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -53,7 +53,7 @@ int		ft_convert_char(char c)
 		return (r);
 	}
 	else
-		return (1);
+		return (0);
 }
 
 int		**ft_stock_line(int argc, char **argv)
@@ -122,6 +122,64 @@ int		ft_verif(int argc, char **argv)
 	return (0);
 }
 
+int		ft_missing_line(int **tab, int x, int v)
+{
+	int y;
+
+	y = 0;
+	while (y != 9)
+	{
+		if (tab[x][y] == v)
+			return (0);
+		y++;
+	}
+	return (1);
+}
+
+int		ft_missing_column(int **tab, int y, int v)
+{
+	int x;
+
+	x = 0;
+	while (x != 9)
+	{
+		if (tab[x][y] == v)
+			return (0);
+		x++;
+	}
+	return (1);
+}
+
+int		ft_missing_block(int **tab, int x, int y, int v)
+{
+	int i;
+	int j;
+
+	i = x - (x % 3);
+	j = y - (y % 3);
+	while (x < i + 3)
+	{
+		x = i;
+		while (y < j + 3)
+		{
+			y = j;
+			if (tab[x][y] == v)
+				return (0);
+			y++;
+		}
+		x++;
+	}
+	return (1);
+}
+
+
+
+
+void	ft_set_up_item(int **tab, int x, int y)
+{
+	
+}
+
 int		main(int argc, char **argv)
 {
 	int i;
@@ -131,6 +189,7 @@ int		main(int argc, char **argv)
 	if (argc != 10 || ft_verif(argc, argv))
 		return (0);
 	tab = ft_stock_line(argc, argv);
+
 	ft_display_tab(tab);
 	return (0);
 }
