@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_atoi.c                                        .::    .:/ .      .::   */
+/*   do_op.h                                          .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/16 11:53:02 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/16 12:57:44 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/16 14:53:14 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/16 17:11:40 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_atoi(char *str)
-{
-	int	n;
-	int	r;
-	int	i;
+#ifndef DO_OP_H
 
-	i = 0;
-	n = 0;
-	r = 0;
-	while (str[i] <= ' ' || (str[i] == '+' && (str[i + 1] != '+' ||
-	str[i + 1] != '-')))
-		i++;
-	if (str[i] == '-')
-	{
-		n = -1;
-		i++;
-	}
-	while (str[i] <= '0' && str[i] >= '9')
-	{
-		r = r * 10 + str[i] - '0';
-		i++;
-	}
-	if (n)
-		r = -r;
-	return (r);
-}
+# define DO_OP_H
+
+int		ft_add(int a, int b);
+int		ft_sub(int a, int b);
+int		ft_mul(int a, int b);
+int		ft_div(int a, int b);
+int		ft_mod(int a, int b);
+int		ft_atoi(char *str);
+void	ft_putchar(char c);
+void	ft_putnbr(int nb);
+void	ft_putstr(char *str);
+
+#endif

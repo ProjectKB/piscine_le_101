@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/16 10:49:01 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/16 11:03:52 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/16 16:17:56 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -31,7 +31,8 @@ int		*ft_map(int *tab, int length, int(*f)(int))
 	int *ptr_tab;
 
 	i = -1;
-	ptr_tab = (int*)malloc(sizeof(*ptr_tab) * length);
+	if (!(ptr_tab = (int*)malloc(sizeof(*ptr_tab) * length)))
+		return (NULL);
 	while (++i < length)
 		ptr_tab[i] = f(tab[i]);
 	return (ptr_tab);
