@@ -1,53 +1,58 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_map.c                                         .::    .:/ .      .::   */
+/*   ft_sort_wordtab.c                                .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/16 10:49:01 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/16 18:11:47 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/16 17:28:48 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/16 18:06:57 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-int		ft_addition(int a)
-{
-	return (a + 2);
-}
-
-int		*ft_map(int *tab, int length, int (*f)(int))
+int		ft_strcmp(char *s1, char *s2)
 {
 	int	i;
-	int *ptr_tab;
 
-	i = -1;
-	if (!(ptr_tab = (int*)malloc(sizeof(*ptr_tab) * length)))
-		return (NULL);
-	while (++i < length)
-		ptr_tab[i] = f(tab[i]);
-	return (ptr_tab);
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] && s2[i])
+		i++;
+	return (s1[i] - s2[i]);
 }
 
-int		main(void)
+void	ft_sort_wordtab(char **tab)
 {
-	int	*ptr;
-	int	tab[5] = {1, 2, 3, 4};
-	int	i = 0;
+	int		i;
+	char	*swap;
+	int		s;
 
-	ptr = ft_map(tab, 4, &ft_addition);
-	while (ptr[i])
+	i = 0;
+	while (tab[i + 1])
 	{
-		printf("%d", ptr[i]);
+		if (ft_strcmp(tab[i], tab[i + 1]) > 0)
+		{
+			swap = tab[i];
+			tab[i] = tab[i + 1];
+			tab[i + 1] = swap;
+			i = 0;
+		}
+		else
+			i++;
+	}
+}
+
+#include <stdio.h>
+
+int		main(int argc, char **argv)
+{
+	int		i;
+
+	i = 1;
+	ft_sort_wordtab(argv);
+	while (argv[i])
+	{
+		printf("%s", argv[i]);
 		i++;
 	}
 	return (0);

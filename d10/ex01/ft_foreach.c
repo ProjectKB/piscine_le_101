@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/16 10:35:00 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/16 12:48:34 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/16 18:12:27 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -34,9 +34,9 @@ void	ft_putnbr(int nb)
 		ft_putchar(nb + '0');
 }
 
-void	ft_foreach(int *tab, int length, void(*f)(int))
+void	ft_foreach(int *tab, int length, void (*f)(int))
 {
-	int i;
+	int	i;
 
 	i = -1;
 	while (++i < length)

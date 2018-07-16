@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/16 11:04:40 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/16 11:10:47 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/16 17:25:53 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,7 +18,7 @@ int		ft_any(char **tab, int (*f)(char*))
 	i = -1;
 	while (tab[++i])
 	{
-		if (f(tab[i]))
+		if (f(tab[i]) == 1)
 			return (1);
 	}
 	return (0);

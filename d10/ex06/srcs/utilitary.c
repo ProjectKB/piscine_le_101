@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/16 12:08:04 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/16 14:51:31 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/16 18:08:02 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -46,7 +46,7 @@ void	ft_putnbr(int nb)
 		ft_putchar(n + '0');
 }
 
-int        ft_atoi(char *str)
+int		ft_atoi(char *str)
 {
 	int		n;
 	int		r;
