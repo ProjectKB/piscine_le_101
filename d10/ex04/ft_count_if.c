@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_swap.c                                        .::    .:/ .      .::   */
+/*   ft_count_if.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/02 20:34:26 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/16 10:31:38 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/16 11:12:27 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/16 11:14:09 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
+int		ft_count_if(char **tab, int (*f)(char*))
 {
-	int	swap;
+	int	i;
+	int count;
 
-	swap = *a;
-	*a = *b;
-	*b = swap;
+	i = -1;
+	while (tab[++i])
+	{
+		if (f(tab[i]) == 1)
+			count++;
+	}
+	return (count);
 }

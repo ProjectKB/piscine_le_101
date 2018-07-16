@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_swap.c                                        .::    .:/ .      .::   */
+/*   utilitary.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/02 20:34:26 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/16 10:31:38 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/16 12:08:04 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/16 12:58:39 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
-{
-	int	swap;
+#include <unistd.h>
 
-	swap = *a;
-	*a = *b;
-	*b = swap;
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	 i = -1;
+	 while (str[++i])
+		 ft_putchar(str[i]);
 }
