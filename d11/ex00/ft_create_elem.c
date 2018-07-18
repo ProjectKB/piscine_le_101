@@ -6,13 +6,12 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/17 11:25:46 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/17 11:28:38 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/18 15:57:36 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "ft_list.h"
-#include <stdlib.h>
 
 t_list	*ft_create_elem(void *data)
 {

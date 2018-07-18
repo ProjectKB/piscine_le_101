@@ -6,13 +6,12 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/17 17:54:10 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/18 13:37:46 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/18 16:02:49 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "ft_list.h"
-#include <stdlib.h>
 
 void	ft_list_reverse(t_list **begin_list)
 {

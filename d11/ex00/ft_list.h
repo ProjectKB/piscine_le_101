@@ -6,7 +6,7 @@
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/07/17 11:23:25 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/17 11:25:29 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/07/18 15:57:28 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,6 +14,8 @@
 #ifndef FT_LIST_H
 
 # define FT_LIST_H
+
+# include <stdlib.h>
 
 typedef struct	s_list
 {

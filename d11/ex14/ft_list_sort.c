@@ -1,32 +1,53 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_list_foreach.c                                .::    .:/ .      .::   */
+/*   ft_list_sort.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: loiberti <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/17 19:31:38 by loiberti     #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/18 15:42:01 by loiberti    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/18 15:03:17 by loiberti     #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/18 15:18:44 by loiberti    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "ft_list.h"
 
-void	ft_list_remove_if(t_list *begin_list, void *data_ref, int (*cmp)())
+int		ft_list_size(t_list **begin_list)
 {
-	t_list	*list_ptr;
-	t_list	*tmp;
+	t_list		*maillon;
+	int			count;
 
-	list_ptr = begin_list;
-	while (list_ptr->next)
+	maillon = *begin_list;
+	count = 0;
+	while (maillon)
 	{
-		if ((*cmp)(list_ptr->next->data, data_ref) == 0)
+		maillon = maillon->next;
+		count++;
+	}
+	return (count);
+}
+
+void	ft_list_sort(t_list **begin_list, int (*cmp)())
+{
+	t_list	*maillon;
+	t_list	*tmp;
+	int		count;
+	int		size;
+
+	count = 0;
+	size = ft_list_size(begin_list);
+	maillon = *begin_list;
+	while (count < size - 1)
+	{
+		if (cmp(maillon->data, maillon->next->data) > 0)
 		{
-			tmp = list_ptr->next;
-			list_ptr->next = list_ptr->next->next;
-			free(list_ptr);
+			tmp = maillon;
+			maillon = maillon->next;
+			maillon->next = tmp;
+			count = 0;
 		}
-		list_ptr = list_ptr->next;
+		else
+			count++;
 	}
 }
